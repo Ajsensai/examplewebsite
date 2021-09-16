@@ -16,8 +16,11 @@
     b1 {font-size:200%}
     a {color:white}
     body {background-image: url('walp.jpg')}
+    body {background-attachment: fixed}
     p {color:rgb(100,97,97)}
     p {font-size:120%}
+    p1 {font-size:120%}
+    p1 {color:RGB(100,97,97)}
 </style>
 
 
@@ -87,10 +90,54 @@
         <div id="Portfolio" class="w3-container navi w3-animate-opacity" style="display:none">
             <div class="w3-container w3-center w3-animate-opacity">
                 <center>
-                <b1>Some example of my previous work</b1>><br><br><br><br>
-            
-                <!-- <img src="profile.jpg" class="w3-round" alt="profile" style="width:100%;max-width:200px"> -->            
-            
+                <b1>Some examples of my previous work</b1>><br><br><br><br>
+                <!-- Paragraph -->
+                <b1>Enterprise Switching</b1><br>
+                <p1>A Core, Distribution, access layer switching configuration used to support a complex enterprise network.</p1><br>
+                <img src="cda.jpg" class="w3-round w3-opacity-min" alt="cda"><br>
+                <div class="w3-panel w3-black">
+                    <p1>
+                        <b>Security configuration:</b> Radius authentication across network devices, mac address security, bpdu guards, DHCP tracking & ip source guard<br>
+                        <b>Wireless technology:</b> WLC controlling WAP. WLC also acts as a dhcp server for WAP for connecting guest devices, operating on vlan 300<br>
+                        <b>Voip:</b> Telephony service within a dhcp pool assigned to voice. Includes QOS configuration & DSCP mapping for heavy applications such as video streaming.<br>
+                        <b>Redundancy & Availability:</b> Spanning tree priority on distribution layer switch 1 to assist with load balancing, Spanning tree portfast to reduce redundant network traffic
+                        HSRP configured for high availability in case of a router failure. Link aggregation for high bandwidth. Dedicated NATIVE & PARKING vlan<br>
+                    </p1>
+                </div>
+
+                    <br><br><br><br>
+
+                <b1>Enterprise Routing</b1><br>
+                <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
+                <img src="routing.png" class="w3-round w3-opacity-min" alt="routing"><br>
+                <div class="w3-panel w3-black">
+                        <p1>
+                            <b>OSPFv3 Configuration:</b> Configured R2 & R3 into OSPFv3 address families, Assigned passive interfaces & router-id, stubbed area 1<br>
+                            <b>Named EIGRP:</b> Configured R1 & R2 in AS 101 & configured redistribution between OSPF & EIGRP & used an ACL to block advertising .3 route between R2 & R1.<br>
+                            <b>Security:</b> Enabled routing protocol authentication to secure EIGRP IPv4 & IPv6 using SHA256. <br>
+                            <b>BGP:</b> remote-as configuration and neighbor association included to route between BGP. Assigned backup & primary interfaces for high availability <br>
+                        </p1>
+                </div>
+
+                    <br><br><br><br>
+
+                <b1>Perimiter Security, Firewalls & VPN</b1><br>
+                <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
+                <img src="sec.jpg" class="w3-round w3-opacity-min" alt="security"><br>
+                <div class="w3-panel w3-black">
+                        <p1>
+                            <b>Basic Security:</b> Scrypt encryption, password policy, Admin access, domain & ssh keys, vty lines, AAA local authenticaion, NTP security & Syslog<br>
+                            <b>Zone Based Firewall:</b> Inside to outside configuration including inside protocols (tcp,udp,icmp). Policy mapping, zone-pair security, service-policy (inspect) & zone members <br>
+                            <b>Intrustion Prevention System</b> Configured pubkey-chain & IPS rules. Enabled HTTP services & notification log, set categories & rules <br>
+                            <b>Layer Two Switch Security:</b> Basic Administration access control, SSH authentication & policy, AAA local authentication
+                            Vlan & trunking configuration, similar security to previous switching example <br>
+                            <b>Adaptive Security Appliance Firewall (VPN)</b> Configured for remote access using ASDM. Configured IPsec & IKE protocols, VPN tunnel forwarding & VPN security.
+                        </p1>
+                </div>
+
+                    <br><br><br><br>
+
+                </div>
                 </center>
             </div>
         </div>
