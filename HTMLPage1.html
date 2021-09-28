@@ -23,6 +23,12 @@
     p {font-size:120%}
     p1 {font-size:120%}
     p1 {color:RGB(100,97,97)}
+
+
+    .column {
+  float: left;
+  width: 50%;
+  padding: 10px;}
 </style>
 
 
@@ -42,12 +48,12 @@
     </div>
 
     <div style="margin-left:130px">
-        <div class="w3-padding"><center><h1>AJ Net</h1></div></center>
+        <div class="w3-padding"><center><h1>Anthony Bale</h1></div></center>
       
-        <div id="Home" class="w3-container navi w3-animate-opacity" style="display:none">
+        <div id="Home" class="w3-container navi w3-animate-opacity">
             <div class="w3-container w3-center w3-animate-opacity">
                 <center>
-                <b1>Welcome to my landing page. I made this to practice HTML</b1>
+                <b1>Welcome to my landing page. I made this to practice HTML & showcase some of my previous work</b1>
                 <br><br><br><br>
                 <!-- <img src="profile.jpg" class="w3-round" alt="profile" style="width:100%;max-width:200px"> -->
                 <br><br><br><br>
@@ -64,7 +70,8 @@
                 </div>
                 <div class="w3-panel w3-black">
                 <b1>Experience</b1><br>
-                <p>Security Engineer Internship at AchieVR<br>
+                <p>Senior Technician at JTC Technology<br>
+                    Security Engineer Internship at AchieVR<br>
                     Amazon web services Early Careers Innovation Participant<br>
                     Barista at multiple locations<br>
                     Branch Manager at Max Brenner</p>
@@ -95,66 +102,221 @@
 
         <div id="Portfolio" class="w3-container navi w3-animate-opacity" style="display:none">
             <div class="w3-container w3-center w3-animate-opacity">
-                <center>
                 <b1>Some examples of my previous work</b1>><br><br><br><br>
-                <!-- Paragraph -->
-                <div class="w3-panel w3-black">
-                <b1>Enterprise Switching</b1><br>
-                <p1>A Core, Distribution, access layer switching configuration used to support a complex enterprise network.</p1><br>
-                </div>
-                <img src="cda.jpg" class="w3-round w3-opacity-min" alt="cda"><br>
-                <div class="w3-panel w3-black">
-                    <p1>
-                        <b>Security configuration:</b> Radius authentication across network devices, mac address security, bpdu guards, DHCP tracking & ip source guard<br>
-                        <b>Wireless technology:</b> WLC controlling WAP. WLC also acts as a dhcp server for WAP for connecting guest devices, operating on vlan 300<br>
-                        <b>Voip:</b> Telephony service within a dhcp pool assigned to voice. Includes QOS configuration & DSCP mapping for heavy applications such as video streaming.<br>
-                        <b>Redundancy & Availability:</b> Spanning tree priority on distribution layer switch 1 to assist with load balancing, Spanning tree portfast to reduce redundant network traffic
-                        HSRP configured for high availability in case of a router failure. Link aggregation for high bandwidth. Dedicated NATIVE & PARKING vlan<br>
-                    </p1>
+                
+                <div class="w3-row">
+                    <a href="javascript:void(0)" onclick="openCity(event, 'Networking');">
+                      <div class="w3-third tablink2 w3-bottombar w3-hover-light-grey w3-padding">Networking</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openCity(event, 'Security');">
+                      <div class="w3-third tablink2 w3-bottombar w3-hover-light-grey w3-padding">Cyber Security</div>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openCity(event, 'Developing');">
+                      <div class="w3-third tablink2 w3-bottombar w3-hover-light-grey w3-padding">Projects</div>
+                    </a>
                 </div>
 
-                    <br><br><br><br>
+                <!-- This works but looks shit, use if you can't get bars to work properly -->
+                <!-- <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button tablink2" onclick="openCity(event, 'Networking')">Networking</button>
+                    <button class="w3-bar-item w3-button tablink2" onclick="openCity(event, 'Pen-Testing')">Pen Testing</button>
+                    <button class="w3-bar-item w3-button tablink2" onclick="openCity(event, 'Security')">Security</button>
+                </div> -->
 
-                <div class="w3-panel w3-black">
-                <b1>Enterprise Routing</b1><br>
-                <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
-                </div>
-                <img src="routing.png" class="w3-round w3-opacity-min" alt="routing"><br>
-                <div class="w3-panel w3-black">
-                        <p1>
-                            <b>OSPFv3 Configuration:</b> Configured R2 & R3 into OSPFv3 address families, Assigned passive interfaces & router-id, stubbed area 1<br>
-                            <b>Named EIGRP:</b> Configured R1 & R2 in AS 101 & configured redistribution between OSPF & EIGRP & used an ACL to block advertising .3 route between R2 & R1.<br>
-                            <b>Security:</b> Enabled routing protocol authentication to secure EIGRP IPv4 & IPv6 using SHA256. <br>
-                            <b>BGP:</b> remote-as configuration and neighbor association included to route between BGP. Assigned backup & primary interfaces for high availability <br>
-                        </p1>
+            <br>
+            <br>
+
+            </div>
+                <div id="Networking" class="w3-container city w3-animate-opacity" style="display:none">
+                    <!-- Paragraph -->
+                    <div class="w3-panel w3-black">
+                    <b1>Overview</b1><br>
+                    <p>The below topologies were developed as part of an overall project during the Advanced Diploma of Network security. 
+                        The task was to produce and implement a high level network design to support an enterprise network. 
+                        For reference, the topologies below are proof of concept designs to support the network of a stadium company<br><br></p>
+                    </div>
+
+                    
+                    <div class="w3-panel w3-black">
+                        <b1>Enterprise Switching</b1><br>
+                        <p1>A Core, Distribution, access layer switching configuration used to support a complex enterprise network.</p1>
+                    </div>
+
+                   
+                    <div class="row">
+                        <div class="column">
+                            <p><img src="cda.jpg" class="w3-round w3-opacity-min" alt="cda" style="width:100%"></p>
+                        </div>   
+                        <div class="column w3-panel w3-black">
+                                <p1>
+                                    <b>Security configuration:</b> Radius authentication across network devices, mac address security, bpdu guards, DHCP tracking & ip source guard<br><br>
+                                    <b>Wireless technology:</b> WLC controlling WAP. WLC also acts as a dhcp server for WAP for connecting guest devices, operating on vlan 300<br><br>
+                                    <b>Voip:</b> Telephony service within a dhcp pool assigned to voice. Includes QOS configuration & DSCP mapping for heavy applications such as video streaming.<br><br>
+                                    <b>Redundancy & Availability:</b> Spanning tree priority on distribution layer switch 1 to assist with load balancing, Spanning tree portfast to reduce redundant network traffic
+                                    HSRP configured for high availability in case of a router failure. Link aggregation for high bandwidth. Dedicated NATIVE & PARKING vlan<br><br>
+                                </p1>
+                        </div>
+                    </div>
+
+                    <div class="w3-panel"></div>
+
+                    <div class="w3-panel w3-black">
+                        <b1>Enterprise Routing</b1><br>
+                        <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
+                    </div>
+
+                    <div class="row">
+                    <div class="column">
+                        <div class="w3-panel w3-black">
+                            <p1>
+                                <b>OSPFv3 Configuration:</b> Configured R2 & R3 into OSPFv3 address families, Assigned passive interfaces & router-id, stubbed area 1<br><br>
+                                <b>Named EIGRP:</b> Configured R1 & R2 in AS 101 & configured redistribution between OSPF & EIGRP & used an ACL to block advertising .3 route between R2 & R1.<br><br>
+                                <b>Security:</b> Enabled routing protocol authentication to secure EIGRP IPv4 & IPv6 using SHA256. <br><br>
+                                <b>BGP:</b> remote-as configuration and neighbor association included to route between BGP. Assigned backup & primary interfaces for high availability <br><br>
+                            </p1>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <p><img src="routing.png" class="w3-round w3-opacity-min" alt="routing" style="width:95%"></p>
+                    </div>
+                    </div>
+
+                    <div class="w3-panel"></div>
+
+                    <div class="w3-panel w3-black">
+                        <b1>Perimiter Security, Firewalls & VPN</b1><br>
+                        <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <p><img src="sec.jpg" class="w3-round w3-opacity-min" alt="security" style="width:95%"></p><br>
+                        </div>
+                        <div class="column">
+                            <div class="w3-panel w3-black">
+                                <p1>
+                                    <b>Basic Security:</b> Scrypt encryption, password policy, Admin access, domain & ssh keys, vty lines, AAA local authenticaion, NTP security & Syslog<br><br>
+                                    <b>Zone Based Firewall:</b> Inside to outside configuration including inside protocols (tcp,udp,icmp). Policy mapping, zone-pair security, service-policy (inspect) & zone members <br><br>
+                                    <b>Intrustion Prevention System</b> Configured pubkey-chain & IPS rules. Enabled HTTP services & notification log, set categories & rules <br><br>
+                                    <b>Layer Two Switch Security:</b> Basic Administration access control, SSH authentication & policy, AAA local authentication
+                                    Vlan & trunking configuration, similar security to previous switching example <br><br>
+                                    <b>Adaptive Security Appliance Firewall (VPN)</b> Configured for remote access using ASDM. Configured IPsec & IKE protocols, VPN tunnel forwarding & VPN security.
+                                </p1>
+                            </div>
+                        </div>    
+                    </div>
                 </div>
 
-                    <br><br><br><br>
+                <div id="Security" class="w3-container city w3-animate-opacity" style="display:none">
+                    <div class="w3-container w3-animate-opacity">
+                        <div class="w3-panel w3-black">
+                            <b1>Overview</b1><br>
+                            <p>Most of my previous pen-testing work can't be displayed publically, however you can see some of my methods and ideas below:<br><br></p>
+                            </div>
+                            <div class="w3-panel w3-black">
+                            <b1>Ethical Hacking</b1><br>
+                        <p1>Primarily using Kali, Experienced in identifying vulnerabilities within production and test environments using the following methods:<br><br>
+                        <b>Surveillance</b> (nmap, web analysis, Sniffing)<br>
+                            <b>Exploitation</b> (Msfconsole, searchsploit, Ddos, Brute, SQLI)<br>
+                            <b>Post</b> (persistence, priv escalation, piveting)<br>
+                            <b>Social Engineering</b> (Malicious hardware, SEToolkit, BeEF)</p1><br>
+                            </div>
+                            <img src="kalilogo.png" class="w3-circle w3-opacity-min" alt="kalilogo" style="width:110%;max-width:100px">   
+                            <img src="msfconsole.png" class="w3-circle w3-opacity-min" alt="msfconsole" style="width:100%;max-width:100px">   
+                            <img src="setoolkit.jpg" class="w3-circle w3-opacity-min" alt="setoolkit" style="width:100%;max-width:100px">   
+                            <img src="beef.png" class="w3-circle w3-opacity-min" alt="beef" style="width:90%;max-width:100px">   
+                            <img src="hydra.png" class="w3-circle w3-opacity-min" alt="hydra" style="width:100%;max-width:100px">   
+                            <img src="netcat.jpg" class="w3-circle w3-opacity-min" alt="netcat" style="width:100%;max-width:100px">   
+                            <img src="legion.png" class="w3-circle w3-opacity-min" alt="legion" style="width:100%;max-width:100px">   
 
-                <div class="w3-panel w3-black">
-                <b1>Perimiter Security, Firewalls & VPN</b1><br>
-                <p1>A multi-protocol ipv4 & ipv6 routing solution to connect enterprise networks</p1><br>
-                </div>
-                <img src="sec.jpg" class="w3-round w3-opacity-min" alt="security"><br>
-                <div class="w3-panel w3-black">
-                        <p1>
-                            <b>Basic Security:</b> Scrypt encryption, password policy, Admin access, domain & ssh keys, vty lines, AAA local authenticaion, NTP security & Syslog<br>
-                            <b>Zone Based Firewall:</b> Inside to outside configuration including inside protocols (tcp,udp,icmp). Policy mapping, zone-pair security, service-policy (inspect) & zone members <br>
-                            <b>Intrustion Prevention System</b> Configured pubkey-chain & IPS rules. Enabled HTTP services & notification log, set categories & rules <br>
-                            <b>Layer Two Switch Security:</b> Basic Administration access control, SSH authentication & policy, AAA local authentication
-                            Vlan & trunking configuration, similar security to previous switching example <br>
-                            <b>Adaptive Security Appliance Firewall (VPN)</b> Configured for remote access using ASDM. Configured IPsec & IKE protocols, VPN tunnel forwarding & VPN security.
-                        </p1>
+
+
+
+
+
+                        <br><br><br><br>
+
+                        <div class="row">
+                            <div class="column">
+                                <div class="w3-panel w3-black">
+                                    <b1>Incident Response</b1><br><p1>An example of a simulated Incident Response exersise</p1> 
+                                    <p><b>Identification, Containment, Eradication/Remediation & Recovery</b><br>
+                                        Lead an Incident Response Exersise whereby a scenario incident had taken place as the final project for Certificate IV Cyber Security. 
+                                        Worked in a team to set deliverables, communicate to stakeholders, develop both red and blue books & perform incident reponse as realistically as possible. 
+                                        Faced with brute force attacks, exposed vulnerabilities & denial of service attacks within a simulated cyber breach performed by other students</p>
+                                </div>
+                            </div>    
+                            <div class="column">
+                              <p><img src="irtx.png" class="w3-round w3-opacity-min" alt="irtx" style="width:100%;max-width:400px"><br</p>
+                            </div>
+                          </div>
+
+
+                          <div class="w3-panel"></div>
+
+                        <div class="w3-panel w3-black">
+                        <b1>Security related projects on my to-do list</b1><br>
+                        <p>Develop php landing page from a web server as a listener and grabber<br>
+                            Develop more advanced scripts with Ducky (point to php serv)<br>
+                            force MITM using rogue wireless access point at a physical location<br>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                    <br><br><br><br>
+                <div id="Developing" class="w3-container city w3-animate-opacity" style="display:none">
+                    <div class="w3-container w3-animate-opacity">
+                        <div class="w3-panel w3-black">
+                        <b1>Overview</b1><br>
+                        <p>A mentor of mine once said that in order to understand IT, you need to live & breath IT.
+                            Below you can see a range of IT related projects that i've worked on for my own personal development<br><br><br></p>
+                        </div>
 
+
+                        <div class="row">
+                            <div class="column">
+                                <div class="w3-panel w3-black">
+                                    <b1>Web Development</b1><br>
+                                    <p>Python, Javascript, HTML5 used to create this web page. Beyond HTML, have worked on automation projects linked to web applications & plan to further develop web skills
+                                        in order to utilize pen testing tools. i.e. listener page for Kali exploits, PhP landing page for physical exfiltration<br><br></p>
+                                </div>
+                                <div class="w3-panel w3-black">
+                                    <b1>Server Hosting</b1><br>
+                                    <p>There is more fun in hosting & configuring plugins for a game server than playing the actual game. Previously hosted a sourcemod server which held 2k+ players monthly.
+                                        The game server featured many custom made plugins and an expansive list of web based donor features and upgrades which ended up being a profitable project.
+                                        Today i host a few simple modded game servers for fun between whitelisted people.
+                                    </p>
+                                </div>
+                                <div class="w3-panel w3-black">
+                                    <b1>Home Automation</b1><br>
+                                    <p> Worked with Julian to create a strong home network with multiple firewalls, vlans & DMZ/LAB zones. The home network setup currently holds 100+ IoT devices
+                                        and is configured for high security & availability. holding several access points & layer three switches, Our home network environment rivals many large enterprise models.
+                                        Includes many automation ITTF tasks, motion detection, timing events and API's.
+                                    </p>
+                                </div>
+                                <div class="w3-panel w3-black">
+                                    <b1>Technologies</b1><br>
+                                    <p><b>IDE: </b>Visual Studio Code, Eclipse, Pycharm, Atom, vi/vim/nano<br>
+                                        <b>Scheduling: </b>Kanban, Jira suite, Automation, Notion <br>
+                                        <b>Version Control: </b> Bitbucket, Github <br>
+                                        <b>Languages:</b> Javascript, Python, HTML5 <br>
+                                        <b>CLI:</b> Linux, Cisco <br>
+                                    </p>
+                                </div>
+                                </div>    
+                            <div class="column">
+                              <p><img src="tf2conf.jpg" class="w3-round w3-opacity-min" alt="irtx" style="width:100%;max-width:400px"></p>
+                            </div>
+                          </div>
+
+
+                        </div>
+                    </div>
                 </div>
-                </center>
             </div>
         </div>
 
-
+<!-- Animation for fading navi bars -->
     <script>
         function openLink(evt, animName) {
           var i, x, tablinks;
@@ -171,6 +333,51 @@
         }
     </script>
 
+<!-- Animation for  Tabs -->
+<script>
+    function openCity2(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(cityName).style.display = "block";  
+    }
+    </script>
+
+<script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink2");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-border-red";
+    }
+    </script>
+
+<footer>
+    Anthony Bale 2021
+</footer>
 
 </body>
 </html>
+
+
+<!-- Template column/row
+                        <div class="row">
+                            <div class="column">
+                                <div class="w3-panel w3-black">
+                                    <b1>TITLE</b1><br>
+                                    <p>TEXT<br><br></p>
+                                </div>
+                            </div>    
+                            <div class="column">
+                              <p><img src="tf2conf.jpg" class="w3-round w3-opacity-min" alt="irtx" style="width:100%;max-width:400px"></p>
+                            </div>
+                          </div> -->
