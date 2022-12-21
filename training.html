@@ -36,12 +36,6 @@ body, html {
   min-height: 400px;
 }
 
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("rack2.jpg");
-  min-height: 400px;
-}
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
@@ -56,22 +50,6 @@ body, html {
 </head>
 <body>
 
-    
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-white">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">Portfolio</a>
-    <a href="#Socials" class="w3-bar-item w3-button" onclick="toggleFunction()">Socials</a>
-  </div>
-</div>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -85,15 +63,15 @@ body, html {
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-third w3-section">
     <span class="w3-xlarge">User management <i class="fa fa-user-circle"></i></span><br>
-    <a href="https://anthonybale.notion.site/Megan-Group-7d7231d19709495e8160258fbb28ba76" class="w3-bar-item w3-button">Megan Group</a><br>
-    <a href="https://anthonybale.notion.site/Joni-Group-bd70df616dcf4056a8b5528a8bfd884f" class="w3-bar-item w3-button">Joni Group</a><br>
-    <a href="https://anthonybale.notion.site/Grady-Group-cd7e2e60093b4fcca9316fda564a1b57" class="w3-bar-item w3-button">Grady Group</a><br>
+    <a href="https://anthonybale.notion.site/Megan-Group-7d7231d19709495e8160258fbb28ba76" target="_blank" class="w3-bar-item w3-button">Megan Group</a><br>
+    <a href="https://anthonybale.notion.site/Joni-Group-bd70df616dcf4056a8b5528a8bfd884f" target="_blank" class="w3-bar-item w3-button">Joni Group</a><br>
+    <a href="https://anthonybale.notion.site/Grady-Group-cd7e2e60093b4fcca9316fda564a1b57" target="_blank" class="w3-bar-item w3-button">Grady Group</a><br>
   </div>
   <div class="w3-third w3-section">
     <span class="w3-xlarge">Device management <i class="fa fa-cogs"></i></span><br>
-    <a href="https://anthonybale.notion.site/Endpoint-06576d61f9a242b3ac506f860f3346f6" class="w3-bar-item w3-button">Endpoint</a><br>
-    <a href="https://anthonybale.notion.site/Compliance-3675550d886d4d399afde9a2fe1d13a1" class="w3-bar-item w3-button">Compliance</a><br>
-    <a href="https://anthonybale.notion.site/Company-Portal-1da4367d188d49c2861a7f47ed31a44a" class="w3-bar-item w3-button">Company Portal</a><br>
+    <a href="https://anthonybale.notion.site/Endpoint-06576d61f9a242b3ac506f860f3346f6" target="_blank" class="w3-bar-item w3-button">Endpoint</a><br>
+    <a href="https://anthonybale.notion.site/Compliance-3675550d886d4d399afde9a2fe1d13a1" target="_blank" class="w3-bar-item w3-button">Compliance</a><br>
+    <a href="https://anthonybale.notion.site/Company-Portal-1da4367d188d49c2861a7f47ed31a44a" target="_blank" class="w3-bar-item w3-button">Company Portal</a><br>
   </div>
   <div class="w3-third w3-section">
     <span class="w3-xlarge">Advanced Tasks <i class="fa fa-code"></i></span><br>
@@ -103,6 +81,11 @@ body, html {
   </div>
 </div>
 
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+</div>
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -110,37 +93,7 @@ body, html {
     <p>Last updated 2022</p>
   </div>
 </footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-// window.onscroll = function() {myFunction()};
-// function myFunction() {
-//     var navbar = document.getElementById("myNavbar");
-//     if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-//         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-//     } else {
-//         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-//     }
-// }
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
 
 </body>
+
 </html>
