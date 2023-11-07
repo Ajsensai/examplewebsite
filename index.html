@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
-<body>
-<!-- Loader -->
-  <div class="loader">
-    <span class="loader__element"></span>
-    <span class="loader__element"></span>
-    <span class="loader__element"></span>
-  </div>
-
+<body onload="loader()" style="margin:0;">
+<div id="loader"></div>
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home">
+<div class="bgimg-1 w3-display-container" id="home" style="display:none">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center aj-heading-1 w3-padding-large w3-xxxlarge w3-wide w3-animate-opacity"><span class="w3-hide-small" id="title">Anthony</span> Bale</span>
   </div>
@@ -37,13 +31,13 @@
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64">
+<div class="w3-content w3-container w3-padding-64" id="about" style="display:none">
   <h3 class="w3-center">Cyber Security professional with project management & leadership experience</h3>
   <p class="w3-wide w3-center"><i class="fa fa-codepen"></i>Penetration Testing & Incident Response</p>
   <p class="w3-wide w3-center"><i class="fa fa-server"></i>Network Architecture & Project Design</p>
 </div>
 
-<div class="w3-row w3-center aj-banner-style-1 w3-padding-16" id="test_animation">
+<div class="w3-row w3-center aj-banner-style-1 w3-padding-16" id="test_animation" style="display:none">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">Certificate IV</span><br>
     Information Technology Networking
@@ -63,14 +57,14 @@
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio" style="display:none">
   <div class="w3-display-middle">
     <span class="w3-padding-large aj-heading-1 w3-xxlarge w3-wide">Portfolio</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64">
+<div class="w3-content w3-container w3-padding-64" id="portfolio_sect" style="display:none">
   <p class="w3-center"><em>Here are some of my projects. Please Click on the images to read more.</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -105,14 +99,14 @@
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="Socials">
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="Socials" style="display:none">
   <div class="w3-display-middle">
      <span class="w3-padding-large aj-heading-1 w3-xxlarge w3-wide">Socials</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64">
+<div class="w3-content w3-container w3-padding-64" id="contact" style="display:none">
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <img src="src/media/thumb.jpg" class="w3-image w3-round" style="width:100%">
@@ -135,7 +129,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center aj-banner-style-1 w3-padding-64">
+<footer class="w3-center aj-banner-style-1 w3-padding-64" id="footer" style="display:none">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-large w3-section">
     <p>Last updated 2023</p>
@@ -146,8 +140,7 @@
   <script src="src/components/menu.js"></script>
   <script src="src/components/image-alt-text.js"></script>
   <script src="src/components/head-config.js"></script>
-  <script src="src/components/loader.js"></script>
   <script src="src/components/api/cloudflare-info.js"></script>
-
+  <script src="src/components/loader.js"></script>
 </body>
 </html>
