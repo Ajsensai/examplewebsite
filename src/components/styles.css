@@ -71,22 +71,37 @@ body, h1, h2, h3, h4, h5, h6 {
   transform: scale(1.1);
 }
 
-/* .darkgreen {
-  color: #EEEEEE;
-  background-color: #222831;
-  opacity: 120%;
-} */
-.darkgreen {
+
+.aj-banner-style-1 {
   color: #222831;
   background-color: #EEEEEE;
   opacity: 120%;
 }
 
-.darkgreen2 {
+.aj-heading-1 {
   color: #222831;
   background-color: #EEEEEE;
   opacity: 120%;
 }
+
+/* styles.css */
+#cloudflare-info {
+  color: #222831;
+  background-color: #EEEEEE;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally within the flex container */
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+}
+
+
 
 .close {
   position: absolute;
