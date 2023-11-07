@@ -1,22 +1,39 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Function to hide the loader when the content is loaded
-    function hideLoader() {
-      const loader = document.querySelector(".loader");
-      loader.style.display = "none";
+var myVar;
+
+function loader() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  // Elements to display
+  const elementsToDisplay = [
+    "home",
+    "about",
+    "test_animation",
+    "portfolio",
+    "portfolio_sect",
+    "Socials",
+    "contact",
+    "footer",
+  ];
+
+  // Hide the loader
+  const loaderElement = document.getElementById("loader");
+  if (loaderElement) {
+    loaderElement.style.display = "none";
+  }
+
+  // Loop through the elements and set their display to "block"
+  elementsToDisplay.forEach((elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.style.display = "block";
     }
-  
-    // Function to simulate a delay
-    function simulateDelayedLoad() {
-      // Delay for 3 seconds (adjust as needed)
-      setTimeout(function () {
-        // After the delay, hide the loader
-        hideLoader();
-  
-        // Add any other initialization or actions you want to perform after the delay
-      }, 3000); // 3000 milliseconds (3 seconds)
-    }
-  
-    // Call the function to simulate the delayed load
-    simulateDelayedLoad();
   });
-  
+}
+
+// Call the showPage function after a delay
+setTimeout(showPage, 1000);
+
+
+
