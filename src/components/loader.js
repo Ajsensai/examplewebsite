@@ -15,6 +15,7 @@ function showPage() {
     "Socials",
     "contact",
     "footer",
+    "changeThemeButton"
   ];
 
   // Hide the loader

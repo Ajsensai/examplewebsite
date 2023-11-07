@@ -18,17 +18,21 @@ body, h1, h2, h3, h4, h5, h6 {
     background-size: cover;
   }
   
-  .bgimg-1 {
-    background-image: url('/src/media/rack2.jpg');
-    min-height: 100%;
+  .common-bg-image{
+    background-image: url('/src/media/neon_cable6.jpg');
     opacity: 80%;
   }
+
+  .bgimg-1 {
+    min-height: 100%;
+  }
   
-  .bgimg-2,
-  .bgimg-3 {
-    background-image: url('/src/media/rack2.jpg');
+  .bgimg-2 {
     min-height: 400px;
-    opacity: 80%;
+  }
+
+  .bgimg-3 {
+    min-height: 400px;
 
   }
   
@@ -97,7 +101,7 @@ body, h1, h2, h3, h4, h5, h6 {
   justify-content: center; /* Center horizontally within the flex container */
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 65%;
   transform: translate(-50%, -50%); /* Center horizontally and vertically */
 }
 /* Media query for screens with a maximum width of 768px (adjust this value as needed) */
@@ -161,7 +165,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
   .content {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 160px;
@@ -322,7 +326,31 @@ body, h1, h2, h3, h4, h5, h6 {
     to{ bottom:0; opacity:1 }
   }
   
-  #myDiv {
-    display: none;
+
+  #changeThemeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #EEEEEE;
+    color: 393E46;
+    border: none;
+    padding: 5px 10px;
     text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1;
   }
+  
+  #changeThemeButton:hover {
+    background-color: #00ADB5;
+  }
+  
+#portfolio,
+#Socials,
+#home {
+  /* Other existing styles */
+  transition: background-image 0.5s ease;
+}
+
+  
