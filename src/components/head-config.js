@@ -3,10 +3,10 @@ const headConfig = {
     favicon: "/favicon.png",
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
+    lang: "en",
     stylesheets: [
       "https://www.w3schools.com/w3css/4/w3.css",
       "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
-      // "https://fonts.googleapis.com/css?family=Cousine|Ubuntu&effect=neon|outline|emboss|shadow-multiple",
       "https://fonts.googleapis.com/css2?family=Hammersmith+One&family=IBM+Plex+Mono&family=Roboto+Mono&family=Source+Code+Pro&family=Ubuntu+Mono&display=swap",
       "/src/components/styles.css" // Include the local CSS file
     ]

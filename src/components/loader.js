@@ -9,7 +9,7 @@ function showPage() {
   const elementsToDisplay = [
     "home",
     "about",
-    "test_animation",
+    "bar_hover",
     "portfolio",
     "portfolio_sect",
     "Socials",
