@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add security headers
   const securityHeaders = [
     { name: "X-Content-Type-Options", value: "nosniff" }, // Prevent MIME sniffing
-    { name: "X-Frame-Options", value: "DENY" }, // Avoid Clickjacking
     { name: "X-XSS-Protection", value: "1; mode=block" }, // Enable XSS protection in supported browsers
     {
       name: "Content-Security-Policy",

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html> 
+<body>
 <!-- First Parallax Image with Logo Text -->
 <div class="common-bg-image w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -9,41 +10,9 @@
 
 <!-- Container (About Section) -->
 <div id="dynamicSections" class="w3-row w3-center w3-dark-grey w3-padding-16"></div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const dynamicSections = document.getElementById("dynamicSections");
-
-  sectionConfig.forEach(section => {
-    const sectionDiv = document.createElement("div");
-    sectionDiv.className = "w3-quarter w3-section";
-
-    const sectionTitle = document.createElement("span");
-    sectionTitle.className = "w3-xlarge";
-    sectionTitle.innerHTML = `${section.title} <i class="fa ${section.icon}"></i>`;
-
-    sectionDiv.appendChild(sectionTitle);
-    sectionDiv.appendChild(document.createElement("br")); // Add a line break
-
-    section.links.forEach(link => {
-      const linkElement = document.createElement("a");
-      linkElement.href = link.link;
-      linkElement.target = "_blank";
-      linkElement.className = "w3-bar-item w3-button";
-      linkElement.textContent = link.name;
-
-      sectionDiv.appendChild(linkElement);
-    });
-
-    dynamicSections.appendChild(sectionDiv);
-  });
-});
-
-</script>
-
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="common-bg-image w3-display-container w3-opacity-min" id="portfolio">
-</div>
+<div class="common-bg-image w3-display-container w3-opacity-min" id="portfolio"></div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
@@ -54,16 +23,17 @@ document.addEventListener("DOMContentLoaded", function () {
     <p>Last updated 2023</p>
   </div>
 </footer>
+
+</body>
+
+<!-- Scripts -->
 <script src="src/components/modal.js"></script>
 <script src="src/components/menu.js"></script>
-<script src="src/components/image-alt-text.js"></script>
 <script src="src/components/head-config.js"></script>
 <script src="src/components/api/cloudflare-info.js"></script>
 <script src="src/components/loader.js"></script>
-<script src="src/components/scroll-animation-training.js"></script>
 <script src="src/components/background-select.js"></script>
 <script src="src/components/modules.js"></script>
-
-</body>
+<script src="src/components/module-loader.js"></script>
 
 </html>
