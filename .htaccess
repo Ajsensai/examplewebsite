@@ -1,3 +1,29 @@
+# Enable the rewrite engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Redirect to HTTPS (uncomment the lines below if you have an SSL certificate installed)
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
+
+# Set the default character set
+AddDefaultCharset UTF-8
+
+# Disable directory listing
+Options -Indexes
+
+# Set the default index file
+DirectoryIndex index.html index.php
+
+# Force the download of certain file types
+<FilesMatch "\.(pdf|doc|zip)$">
+    Header set Content-Disposition "attachment"
+</FilesMatch>
+
+# Set security headers (as mentioned in a previous response)
 <IfModule mod_headers.c>
     Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
@@ -6,13 +32,22 @@
     Header always set X-XSS-Protection "1; mode=block"
 </IfModule>
 
+# Custom error pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+# Add more as needed
 
-#example.com/page will display the contents of example.com/page.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L,QSA]
+# Disable server signature
+ServerSignature Off
 
-#301 from example.com/page.html to example.com/page
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+# Protect .htaccess and .htpasswd files
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Protect against clickjacking
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
