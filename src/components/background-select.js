@@ -1,17 +1,12 @@
 const images = [
-  'neon_cable5.jpg',
-  'neon_cable4.jpg',
-  'neon_cable3.jpg',
-  'neon_cable2.jpg',
-  'neon_cable.jpg',
-  'blob.jpg',
+  'background_2.jpg',
 ];
 
 const fonts = [
   'IBM Plex Mono, monospace',
-  'Roboto Mono, monospace',
-  'Source Code Pro, monospace',
-  'Ubuntu Mono, monospace',
+  // 'Roboto Mono, monospace',
+  // 'Source Code Pro, monospace',
+  // 'Ubuntu Mono, monospace',
 ];
 
 const imagePathPrefix = '/src/media/';

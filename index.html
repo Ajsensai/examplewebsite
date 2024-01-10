@@ -1,135 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <body onload="loader()" style="margin:0;">
-    <div id="loader"></div>
+<html> 
+<body>
+<!-- First Parallax Image with Logo Text -->
+<div class="common-bg-image w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">2024 Staff</span> Training</span>
+  </div>
+</div>
 
-    <!-- First Parallax Image with Logo Text -->
-    <div class="common-bg-image w3-display-container" id="home" style="display:none">
-      <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center aj-heading-1 w3-padding-large w3-xxxlarge w3-animate-opacity"><span class="w3-hide-small" id="title">Anthony</span> Bale</span>
-      </div>
-      <!-- Theme change button -->
-      <button id="changeThemeButton" style="display:none" class="w3-animate-opacity aj-banner-style-1"  onclick="changeBackgroundTheme()">Change Theme</button>
-      <!-- Scroll Animation -->
-      <div class="w3-center content" id="scrollAnimationContainer"></div>
-      <!-- Cloudflare typewriter animation -->
-      <div id="cloudflare-info" class="w3-animate-opacity aj-banner-style-1"><typewriter-widget></typewriter-widget></div>
-    </div>
+<!-- Container (About Section) -->
+<div id="dynamicSections" class="w3-opacity-min w3-row w3-center w3-black w3-padding-16 w3-animate-opacity"></div>
 
-    <!-- Container (About Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="about" style="display:none">
-      <h3 class="w3-center">Cyber Security professional with project management & leadership experience</h3>
-      <p class=" w3-center"><i class="fa fa-codepen" id="widefocus"></i>Penetration Testing & Incident Response</p>
-      <p class=" w3-center"><i class="fa fa-server" id="widefocus"></i>Network Architecture & Project Design</p>
-    </div>
-    <div class="w3-row w3-center aj-banner-style-1 w3-padding-16" id="bar_hover" style="display:none">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">Certificate IV</span><br>
-        Information Technology Networking
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">Certificate IV</span><br>
-        Cyber Security
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">Adv. Diploma</span><br>
-        Network Security
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">Bachelors</span><br>
-        Cyber security
-      </div>
-    </div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="common-bg-image w3-display-container w3-opacity-min" id="portfolio"></div>
 
-    <!-- Second Parallax Image with Portfolio Text -->
-    <div class="common-bg-image w3-display-container w3-opacity-min" id="portfolio" style="display:none">
-      <div class="w3-display-middle">
-        <span class="w3-padding-large aj-heading-1 w3-xxlarge">Portfolio</span>
-      </div>
-    </div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <p>Feedback QR</p>
+  <img src="/src/media/feedbackqr.png" style="width:5%" </img><br><br>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-large w3-section">
+    <p>Last updated 2023</p>
+  </div>
+</footer>
 
-    <!-- Container (Portfolio Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="portfolio_sect" style="display:none">
-      <p class="w3-center"><em>Here are some of my projects. Please Click on the images to read more.</em></p><br>
-      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-      <div class="w3-row-padding w3-center">
-        <div id="imageModal" class="modal">
-          <span class="close" onclick="closeImageModal()">&times;</span>
-          <img id="modalImage" class="modal-content">
-          <div id="caption"></div>
-        </div>
-        <div class="w3-col m3">
-          <img id="image1" src="src/media/cda.jpg" style="width:100%" onclick="displayImageModal(this)" class="w3-hover-opacity">
-        </div>
-        <div class="w3-col m3">
-          <img id="image2" src="src/media/routing.png" style="width:100%" onclick="displayImageModal(this)" class="w3-hover-opacity">
-        </div>
-        <div class="w3-col m3">
-          <img id="image3" src="src/media/sec.jpg" style="width:100%" onclick="displayImageModal(this)" class="w3-hover-opacity">
-        </div>
-        <div class="w3-col m3">
-          <img id="image4" src="src/media/irtx.png" style="width:100%" onclick="displayImageModal(this)" class="w3-hover-opacity">
-        </div>
-      </div>
-    </div>
-    <!-- Modal for full-size images on click-->
-    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-    </div>
+</body>
 
-    <!-- Third Parallax Image with Portfolio Text -->
-    <div class="common-bg-image w3-display-container w3-opacity-min" id="Socials" style="display:none">
-      <div class="w3-display-middle">
-        <span class="w3-padding-large aj-heading-1 w3-xxlarge">Socials</span>
-      </div>
-    </div>
+<!-- Scripts -->
+<script src="src/components/modal.js"></script>
+<script src="src/components/menu.js"></script>
+<script src="src/components/head-config.js"></script>
+<script src="src/components/api/cloudflare-info.js"></script>
+<script src="src/components/loader.js"></script>
+<script src="src/components/background-select.js"></script>
+<script src="src/components/modules.js"></script>
+<script src="src/components/module-loader.js"></script>
 
-    <!-- Container (Contact Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="contact" style="display:none">
-      <div class="w3-row w3-padding-32 w3-section">
-        <div class="w3-col m4 w3-container">
-          <img src="src/media/rack2.jpg" class="w3-image w3-round" style="width:100%">
-        </div>
-        <div class="w3-col m8 w3-panel">
-          <div class="contact-info">
-            <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xxlarge w3-margin-right"></i> Sydney, Australia<br>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anthony-bale-139a9a21/" target="_blank" class="w3-bar-item w3-button">
-              <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xxlarge w3-margin-right"></i> LinkedIn
-            </a>
-            <br>
-            <a href="https://www.instagram.com/aj__b__/" target="_blank" class="w3-bar-item w3-button">
-              <i class="fa fa-instagram fa-fw w3-hover-text-black w3-xxlarge w3-margin-right"></i> Instagram
-            </a>
-            <br></br>
-            <img src="src/media/thumb.jpg" class="w3-image w3-round" style="width:40%">
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- Footer -->
-    <footer class="w3-center aj-banner-style-1 w3-padding-64" id="footer" style="display:none">
-      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-      <div class="w3-large w3-section">
-        <p>Last updated 2023</p>
-      </div>
-    </footer>
-
-
-  <!-- Scripts <3 -->
-    <script src="src/components/modal.js"></script>
-    <script src="src/components/menu.js"></script>
-    <script src="src/components/image-alt-text.js"></script>
-    <script src="src/components/head-config.js"></script>
-    <script src="src/components/api/cloudflare-info.js"></script>
-    <script src="src/components/loader.js"></script>
-    <script src="src/components/scroll-animation.js"></script>
-    <script src="src/components/background-select.js"></script>
-  </body>
 </html>
