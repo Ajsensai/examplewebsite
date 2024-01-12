@@ -1,4 +1,4 @@
-const linkPrefix = "https://anthonybale.notion.site/";
+const linkPrefix = "https://docs.anthonybale.com/";
 
 const sectionConfig = [
   // {
@@ -21,7 +21,7 @@ const sectionConfig = [
     title: "Theory",
     icon: "fa-user-circle",
     links: [
-      { name: "Endpoint Overview (20m)", path: "Hands-on-6e473a21fc614966bd41f20a2c1dc96e" },
+      { name: "Endpoint Overview (20m)", path: "Staff%20Training/Endpoint%20Overview%206e473a21fc614966bd41f20a2c1dc96e/" },
       // { name: "365 Overview (10m)", path: "Overview-1fc83b5bffaf44abb586da35bbfcae93" },
       // { name: "Endpoint Security Overview (20m)", path: "Endpoint-Security-Overview-3ef96dd32a154f9793a51686a72ae9cd?pvs=4" }
     ]
@@ -31,8 +31,8 @@ const sectionConfig = [
     icon: "fa-cogs",
     links: [
       // { name: "Beginner user management (30m)", path: "Megan-Group-7d7231d19709495e8160258fbb28ba76" },
-      { name: "Beginner Endpoint configuration tasks (60m)", path: "Endpoint-06576d61f9a242b3ac506f860f3346f6" },
-      { name: "Custom apps through Company Portal (30m)", path: "Company-Portal-1da4367d188d49c2861a7f47ed31a44a" },
+      { name: "Beginner Endpoint configuration tasks (60m)", path: "Staff%20Training/Intune%20Workshop/" },
+      // { name: "Custom apps through Company Portal (30m)", path: "Company-Portal-1da4367d188d49c2861a7f47ed31a44a" },
       // { name: "Endpoint Security Tasks (60m)", path: "Device-Security-13c2f6da1fae492fac6a7c8ac02902d9?pvs=4" }
     ]
   },
