@@ -1,10 +1,11 @@
 const images = [
-  'neon_cable5.jpg',
-  'neon_cable4.jpg',
-  'neon_cable3.jpg',
-  'neon_cable2.jpg',
-  'neon_cable.jpg',
-  'blob.jpg',
+  // 'neon_cable5.jpg',
+  // 'neon_cable4.jpg',
+  // 'neon_cable3.jpg',
+  // 'neon_cable2.jpg',
+  // 'neon_cable.jpg',
+  // 'blob.jpg',
+  'background_1.jpg'
 ];
 
 const fonts = [
